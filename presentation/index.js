@@ -38,7 +38,8 @@ require("spectacle/lib/themes/default/index.css");
 
 const images = {
   logoWina: require('../assets/logo-winamax.png'),
-  difficult:require('../assets/difficult.png'),
+  difficult: require('../assets/difficult.png'),
+  reduxLogo: require('../assets/redux-logo.png'),
   city: require("../assets/city.jpg"),
   kat: require("../assets/kat.png"),
   logo: require("../assets/formidable-logo.svg"),
@@ -102,6 +103,23 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <Heading>build components, not templates</Heading>
+          </Slide>
+
+          <Slide>
+            <Heading textColor="black" size={4} fit>Donc, nous avons un modèle descendant</Heading>
+            <Heading size={4} textColor="black" fit lineHeight={4}>Mais comment fait-on pour remonter ?</Heading>
+          </Slide>
+
+          <Slide transition={["slide"]}>
+            <Image src={images.reduxLogo.replace('/', '')} />
+          </Slide>
+
+
+
+
+
+          <Slide>
+            <Heading textColor="black">Merci !</Heading>
           </Slide>
 
           <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
