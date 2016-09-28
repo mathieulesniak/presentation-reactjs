@@ -1,0 +1,98 @@
+Se baser sur Spectacle pour le moteur de prez ? https://formidable.com/open-source/spectacle/
+inspirations : 
+http://fr.slideshare.net/nikgraf/react-redux-introduction
+http://coenraets.org/present/react/
+http://fr.slideshare.net/jaisanth/react-js
+http://fr.slideshare.net/emadb/an-introduction-to-reactjs-46258876
+https://react.rocks/blog/images/React_Intro_sept_2016.pdf
+http://fr.slideshare.net/AndrewHull/react-js-and-why-its-awesome
+
+- title
+- qui sommes-nous ?
+- A JAVASCRIPT LIBRARY FOR BUILDING USER INTERFACES
+- séparation MVC. React : only the V
+    - React n'a pas de:
+        -controllers
+        -directives
+        -templates
+        -global event listeners
+        -models
+        -view models
+        Seulemement... des composants
+- code exemple JQuery avec data dans le DOM
+- histoire
+    - avril 2012 rachat d'IG puis refonte / intégration
+    - juin 2013, open source React
+    - Utilisation interne à FB (messenger)
+- Tour d'horizon, qui l'utilise ?
+    - Apple (developer portal)
+    - AirBNB, 
+    - Netflix
+    - BBC (http://www.bbc.co.uk/blogs/internet/entries/47a96d23-ae04-444e-808f-678e6809765d)
+    - Dropbox, Facebook, github, IG, Wired,
+    - Yahoo Mail (http://www.slideshare.net/rmsguhan/react-meetup-mailonreact), 
+    - Reddit (mobile https://github.com/reddit/reddit-mobile)
+    - Whatsapp web
+
+- Difficulté ? https://twitter.com/thomasfuchs/status/708675139253174273
+- build components, not templates
+- exemple de composant basique
+    - une seule méthode requise :render()
+- jsx
+- exemple jsx -> conversion en JS (React.DOM.p(....))
+- encapsuler les composants (et réutiliser)
+- passer des props (modèle descendant) -> photo pyramide verres champagne 
+- props are immutable, children can't touch props
+
+- perf best practice
+    - pas de grosse opé sur le DOM
+    - limiter les accès au DOM
+    - modifier les éléments avant de les ajouter au DOM
+
+- React : re-render everything on every update (!)
+- on nous aurait menti ?
+
+- Virtual dom
+    - DOM allégé (pour être belle en maillot cet été)
+    - diff nouvelle version / ancienne version
+    - Calcul des modifications à appliquer
+    - Application en batch des modifications
+- Component lifecycle
+
+- Ok, on a un modèle descendant, mais on fait comment pour remonter ?
+- Redux !!
+- Principe : (previousState, action) => newState
+- description Flux / Redux + diagramme
+    - components + actions creator -> dispatch -> reducer -> store -> view
+    - décrire brievement chaque partie, notamment le store    
+- SINGLE SOURCE OF TRUTH 
+- C'est quoi une action ?
+- const action = {type: 'ADD_TODO', text: 'Finir la présentation React'}
+- C'est quoi un action creator ?
+- fonction helper pour éviter d'écrire des object
+    - function addTodo(text) {
+        return {type: 'ADD_TODO', text};
+    }
+    (NOTE ES6 shorthand)
+    - <button onClick={dispatch(addTodo('Finir la prez'))}>Ajouter un TODO</button>
+- Et on met ça où ma bonne dame ?
+- Reducer !
+    - exemple de reducer
+    - un reducer créé un nouveau state, il ne le modifie pas !
+- Anatomie d'une app simple
+    - <Provider>
+    - connect()
+
+- Résumé
+    - state / predictable behaviour
+    - (previousState, action) => newState
+
+- Démo time travel ?
+- Et l'asynchrone dans tout ça ?
+- middleware API REST 
+- Saga (compliqué...)
+
+
+- ouverture vers react native
+- Des questions ? viendez chez nous, on kiffe react, et on est pas prêts de s'arrêter !
+-- Ah au fait, cette prez tourne sous ReactJS ;)
