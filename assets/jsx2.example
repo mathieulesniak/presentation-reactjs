@@ -1,0 +1,9 @@
+import React from 'react';
+
+class ReactIsGreat extends React.Component {
+    render() {
+        return <h2>React is great !</h2>;
+    }
+}
+
+export default ReactIsGreat;
