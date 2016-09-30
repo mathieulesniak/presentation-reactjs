@@ -39,7 +39,10 @@ require("spectacle/lib/themes/default/index.css");
 const images = {
   logoWina: require('../assets/logo-winamax.png'),
   difficult: require('../assets/difficult.png'),
+  dontBelieve: require('../assets/dontbelieve.gif'),
   reduxLogo: require('../assets/redux-logo.png'),
+  reduxCycle: require('../assets/redux-cycle.svg'),
+  virtualDom: require('../assets/virtual-dom-update.png'),
   city: require("../assets/city.jpg"),
   kat: require("../assets/kat.png"),
   logo: require("../assets/formidable-logo.svg"),
@@ -63,18 +66,26 @@ export default class Presentation extends React.Component {
             <Heading size={1} fit caps lineHeight={2} textColor="black">
               ReactJS / Redux
             </Heading>
-            <Heading size={1} fit caps textColor="black">
+            <Heading size={1} fit caps textColor="secondary">
               Découverte et mise en œuvre @ Winamax
             </Heading>
 
             
           </Slide>
           <Slide>
-            <Heading textColor="black">Qui sommes nous ?</Heading>
+            <Heading textColor="secondary">Qui sommes nous ?</Heading>
+            <Layout>
+              <Fill>
+                Julien Déléan
+              </Fill>
+              <Fill>
+                Mathieu Lesniak
+              </Fill>
+            </Layout>
           </Slide>
 
           <Slide>
-            <Heading textColor="black" caps>Timeline</Heading>
+            <Heading textColor="secondary" caps>Timeline</Heading>
             <List>
               <ListItem>Avril 2012 rachat d'Instagram.com</ListItem>
               <ListItem>Refonte / intégration au sein de Facebook</ListItem>
@@ -83,7 +94,7 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
           <Slide>
-            <Heading textColor="black">Qui l'utilise ?</Heading>
+            <Heading textColor="secondary">Qui l'utilise ?</Heading>
             <List>
               <ListItem>Apple (developer portal)</ListItem>
               <ListItem>AirBNB, </ListItem>
@@ -97,17 +108,126 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <Heading textColor="black" fit>Et donc, c'est difficile ?</Heading>
+            <Heading textColor="secondary" fit>React ne fait que le V de MVC</Heading>
+            <Appear>
+              <Heading textColor="secondary" size={2} fit>React n'a pas de :</Heading>
+            </Appear>
+            <Appear>
+              <List>
+                <ListItem>Controllers</ListItem>
+                <ListItem>Directive</ListItem>
+                <ListItem>Templates</ListItem>
+                <ListItem>Global event listener</ListItem>
+              </List>
+            </Appear>
+            <Appear>
+              <Heading textColor="secondary" size={3}>Seulement... des composants</Heading>
+            </Appear>
+          </Slide>
+
+          <Slide>
+            <Heading textColor="secondary" fit>Et donc, c'est difficile ?</Heading>
             <Image src={images.difficult.replace('/', '')} />
           </Slide>
 
           <Slide>
-            <Heading>build components, not templates</Heading>
+            <CodePane
+              lang="jsx"
+              source={require("raw!../assets/jsx.example")}
+              margin="20px auto"
+            />
+            <Appear>
+              <Heading textColor="secondary" size={3}>Une seule méthode obligatoire : render()</Heading>
+            </Appear>
           </Slide>
 
           <Slide>
-            <Heading textColor="black" size={4} fit>Donc, nous avons un modèle descendant</Heading>
-            <Heading size={4} textColor="black" fit lineHeight={4}>Mais comment fait-on pour remonter ?</Heading>
+            <Heading textColor="secondary" fit size={2}>Faites des composants, pas des templates,</Heading>
+            <Heading textColor="secondary" fit size={2}>Encapsulez-les et réutilisez-les</Heading>
+          </Slide>
+
+          <Slide>
+            <CodePane
+              lang="jsx"
+              source={require("raw!../assets/jsx.example")}
+              margin="20px auto"
+            />
+            <CodePane
+              lang="jsx"
+              source={require("raw!../assets/jsx2.example")}
+              margin="20px auto"
+            />
+            <CodePane
+              lang="jsx"
+              source={require("raw!../assets/jsx-composed.example")}
+              margin="20px auto"
+            />
+          </Slide>
+
+          <Slide>
+            <Heading textColor="secondary" fit>Le passage de variable ?</Heading>
+            <Heading textColor="secondary" fit>Une solution : les props</Heading>
+          </Slide>
+
+          <Slide>
+            <CodePane
+              lang="jsx"
+              source={require("raw!../assets/jsx-props1.example")}
+              margin="20px auto"
+            />
+            <CodePane
+              lang="jsx"
+              source={require("raw!../assets/jsx-props2.example")}
+              margin="20px auto"
+            />
+          </Slide>
+
+          <Slide>
+            <Heading textColor="black" fit>Les props sont "immutable"</Heading>
+            <Heading textColor="black" fit>les composants enfants ne peuvent les modifier</Heading>
+          </Slide>
+          
+
+          <Slide>
+            <Heading textColor="secondary">Render() à chaque update</Heading>
+          </Slide>
+
+          <Slide>
+            <Heading textColor="secondary" fit>On nous aurait donc menti ?</Heading>
+            <Image src={images.dontBelieve.replace('/', '')} />
+          </Slide>
+
+          <Slide>
+            <Heading textColor="secondary" fit>Rappel sur les best practices pour le DOM</Heading>
+            <List>
+              <Appear><ListItem>On n'effectue pas de grosse opérations sur le DOM</ListItem></Appear>
+              <Appear><ListItem>On limite les accès au DOM</ListItem></Appear>
+              <Appear><ListItem>On modifie des éléments avant de les ajouter au DOM</ListItem></Appear>
+            </List>
+          </Slide>
+
+          <Slide>
+            <Heading textColor="secondary" textColor="secondary">Virtual DOM</Heading>
+            <List>
+                <ListItem>DOM allégé (pour être belle en maillot cet été)</ListItem>
+                <ListItem>Diff entre la nouvelle version et l'ancienne</ListItem>
+                <ListItem>Calcul des modifications à apporter au véritable DOM</ListItem>
+                <ListItem>Application en batch des modifications</ListItem>
+              </List>
+          </Slide>
+
+          <Slide>
+            <Image src={images.virtualDom.replace('/', '')} />
+          </Slide>
+
+          <Slide>
+            <Heading textColor="secondary" fit>Cycle de vie des composants</Heading>
+            <Heading textColor="secondary" fit>ShouldComponentUpdate()</Heading>
+          </Slide>
+
+          <Slide>
+            <Heading textColor="secondary" size={4} fit>Donc, nous avons un modèle descendant</Heading>
+            <Heading size={4} textColor="secondary" fit lineHeight={4}>Mais comment fait-on pour remonter ?</Heading>
           </Slide>
 
           <Slide transition={["slide"]}>
@@ -115,11 +235,28 @@ export default class Presentation extends React.Component {
           </Slide>
 
 
+          <Slide>
+            <Heading textColor="secondary" size={4}>Le principe : </Heading>
+            <CodePane
+              lang="jsx"
+              source="(previousState, action) => newState"
+              margin="20px auto"
+            />
+          </Slide>
+
+          <Slide>
+            <Image src={images.reduxCycle.replace('/', '')} />
+            <Text>source: css-tricks.com</Text>
+          </Slide>
+
+          <Slide>
+            <Heading textColor="secondary" caps>Store : single source of Truth</Heading>
+          </Slide>
 
 
 
           <Slide>
-            <Heading textColor="black">Merci !</Heading>
+            <Heading textColor="secondary">Merci !</Heading>
           </Slide>
 
           <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
