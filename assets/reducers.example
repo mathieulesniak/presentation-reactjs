@@ -1,0 +1,24 @@
+function counter_reducer(state = 0, action) {
+  switch (action.type) {
+    case "COUNTER_ADD":
+      return state + action.value;
+    case "COUNTER_RESET":
+      return 0;
+
+    default:
+      return state;
+  }
+}
+
+function update_reducer(state = {}, action) {
+  switch (action.type) {
+    case "COUNTER_ADD":
+    case "COUNTER_RESET":
+      state = {
+        last: Date.now(),
+        count: state.count + 1
+      };
+      break;
+  }
+  return state;
+}

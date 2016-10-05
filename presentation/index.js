@@ -43,6 +43,10 @@ const images = {
   reduxLogo: require('../assets/redux-logo.png'),
   reduxCycle: require('../assets/redux-cycle.svg'),
   virtualDom: require('../assets/virtual-dom-update.png'),
+  flux: require('../assets/flux.png'),
+  coke: require('../assets/coke.jpg'),
+  mentos: require('../assets/mentos.jpg'),
+  cokementos: require('../assets/mentoscoke.gif'),
   city: require("../assets/city.jpg"),
   kat: require("../assets/kat.png"),
   logo: require("../assets/formidable-logo.svg"),
@@ -54,6 +58,7 @@ preloader(images);
 const theme = createTheme({
   primary: "#F0F0F0",
   secondary: "black",
+  quartenary: "black"
 });
 
 export default class Presentation extends React.Component {
@@ -70,7 +75,7 @@ export default class Presentation extends React.Component {
               Découverte et mise en œuvre @ Winamax
             </Heading>
 
-            
+
           </Slide>
           <Slide>
             <Heading textColor="secondary">Qui sommes nous ?</Heading>
@@ -186,7 +191,7 @@ export default class Presentation extends React.Component {
             <Heading textColor="black" fit>Les props sont "immutable"</Heading>
             <Heading textColor="black" fit>les composants enfants ne peuvent les modifier</Heading>
           </Slide>
-          
+
 
           <Slide>
             <Heading textColor="secondary">Render() à chaque update</Heading>
@@ -231,7 +236,63 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["slide"]}>
+            <Heading textColor="secondary" textColor="secondary">Flux Pattern</Heading>
+            <Text>(Unidirectionnal Data Flow)</Text>
+            <Appear><Image src={images.flux.replace('/', '')} width="100%"/></Appear>
+            <List>
+              <Appear><ListItem>Pas de librairie officielle, uniquement le Dispatcher</ListItem></Appear>
+              <Appear><ListItem><Text>Flummox, Alt, Reflux, MartyJS, Delorean, Fluxxor...</Text></ListItem></Appear>
+            </List>
+          </Slide>
+
+          <Slide>
             <Image src={images.reduxLogo.replace('/', '')} />
+            <List>
+              <ListItem>Expérimentation de Dan Abramov (ReactEurope 2015)</ListItem>
+              <Appear><ListItem>Inspiration d'ELM (langage purement fonctionnel)</ListItem></Appear>
+              <Appear><ListItem>L'objectif ?</ListItem></Appear>
+            </List>
+            <Layout fit>
+              <Appear><Fill>
+                <Image src={images.coke.replace('/','')} width="80%"/>
+                <Text>Mutabilité</Text>
+              </Fill></Appear>
+              <Appear><Fill>
+                <Image src={images.mentos.replace('/','')} width="80%"/>
+                <Text>Asynchronisme</Text>
+              </Fill></Appear>
+              <Appear><Fill>
+                <Image src={images.cokementos.replace('/','')} width="80%"/>
+                <Text>Les 2</Text>
+              </Fill></Appear>
+            </Layout>
+          </Slide>
+
+          <Slide>
+            <Heading textColor="secondary">3 principes</Heading>
+            <Layout fit>
+              <Appear><Fill>
+                <Text>State</Text>
+                <CodePane
+                  lang="js"
+                  source={require("raw!../assets/state.example")}
+                />
+              </Fill></Appear>
+              <Appear><Fill>
+                <Text>Actions</Text>
+                <CodePane
+                  lang="js"
+                  source={require("raw!../assets/actions.example")}
+                />
+              </Fill></Appear>
+              <Appear><Fill>
+                <Text>Reducers</Text>
+                <CodePane
+                  lang="js"
+                  source={require("raw!../assets/reducers.example")}
+                />
+              </Fill></Appear>
+            </Layout>
           </Slide>
 
 

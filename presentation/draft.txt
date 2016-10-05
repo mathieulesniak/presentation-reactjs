@@ -88,12 +88,16 @@ http://fr.slideshare.net/AndrewHull/react-js-and-why-its-awesome
 
 
 - Avantages
+    - Pas du tout lié à React : redux.net, redux.rb
     - comportement déterministe et predictible
     - Tests unitaires triviaux
     - Architecture modulaire (plugins)
     - Voyage dans le temps / Bugtracking
-    - Pas du tout lié à React : redux.net, redux.rb
 
+- Middlewares
+    + Logger
+    + CrashReport
+    + Delay
 
 
 - Principe : (previousState, action) => newState

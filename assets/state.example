@@ -1,0 +1,7 @@
+{
+  counter: 42,
+  update: {
+    last_ts: 1475703937486,
+    count: 1
+  }
+}
