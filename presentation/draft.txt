@@ -1,5 +1,5 @@
 Se baser sur Spectacle pour le moteur de prez ? https://formidable.com/open-source/spectacle/
-inspirations : 
+inspirations :
 http://fr.slideshare.net/nikgraf/react-redux-introduction
 http://coenraets.org/present/react/
 http://fr.slideshare.net/jaisanth/react-js
@@ -26,11 +26,11 @@ http://fr.slideshare.net/AndrewHull/react-js-and-why-its-awesome
     - Utilisation interne à FB (messenger)
 - Tour d'horizon, qui l'utilise ?
     - Apple (developer portal)
-    - AirBNB, 
+    - AirBNB,
     - Netflix
     - BBC (http://www.bbc.co.uk/blogs/internet/entries/47a96d23-ae04-444e-808f-678e6809765d)
     - Dropbox, Facebook, github, IG, Wired,
-    - Yahoo Mail (http://www.slideshare.net/rmsguhan/react-meetup-mailonreact), 
+    - Yahoo Mail (http://www.slideshare.net/rmsguhan/react-meetup-mailonreact),
     - Reddit (mobile https://github.com/reddit/reddit-mobile)
     - Whatsapp web
 
@@ -41,7 +41,7 @@ http://fr.slideshare.net/AndrewHull/react-js-and-why-its-awesome
 - jsx
 - exemple jsx -> conversion en JS (React.DOM.p(....))
 - encapsuler les composants (et réutiliser)
-- passer des props (modèle descendant) -> photo pyramide verres champagne 
+- passer des props (modèle descendant) -> photo pyramide verres champagne
 - props are immutable, children can't touch props
 
 - perf best practice
@@ -59,13 +59,48 @@ http://fr.slideshare.net/AndrewHull/react-js-and-why-its-awesome
     - Application en batch des modifications
 - Component lifecycle
 
+
+
 - Ok, on a un modèle descendant, mais on fait comment pour remonter ?
-- Redux !!
+- Architecture/Concept Flux
+    - MVC != Unidirectional data flow
+    - Pas d'implémentation complète de FB (Dispatcher only)
+    - microcosm / fluce / NuclearJS / disto / microflux / fluctuations
+
+- Redux
+    - Mai 2015 par Dan Abramov (ReactEurope)
+    - Inspiration d'ELM (langage purement fonctionnel)
+    - Mutation et asynchronisme (coca and mentos)
+        - Ce que fait React : synchrone/total et sans mutation du DOM
+
+- Princpe
+    - Store unique qui represente le state de l'app : SINGLE SOURCE OF TRUTH
+    - State read-only : modifiable en émettant des Actions
+    - State modifié par des pure fonctions : les reducers
+
+- Fonctionnement
+    - State = composition de reducers
+    - Chaine de reducer : (previousState, action) => newState
+    - Middleware avant et après les reducers
+
+- Redux + React
+    - @Connect pour remplacer le state et dispatch d'action
+
+
+- Avantages
+    - comportement déterministe et predictible
+    - Tests unitaires triviaux
+    - Architecture modulaire (plugins)
+    - Voyage dans le temps / Bugtracking
+    - Pas du tout lié à React : redux.net, redux.rb
+
+
+
 - Principe : (previousState, action) => newState
 - description Flux / Redux + diagramme
     - components + actions creator -> dispatch -> reducer -> store -> view
-    - décrire brievement chaque partie, notamment le store    
-- SINGLE SOURCE OF TRUTH 
+    - décrire brievement chaque partie, notamment le store
+- SINGLE SOURCE OF TRUTH
 - C'est quoi une action ?
 - const action = {type: 'ADD_TODO', text: 'Finir la présentation React'}
 - C'est quoi un action creator ?
@@ -89,7 +124,7 @@ http://fr.slideshare.net/AndrewHull/react-js-and-why-its-awesome
 
 - Démo time travel ?
 - Et l'asynchrone dans tout ça ?
-- middleware API REST 
+- middleware API REST
 - Saga (compliqué...)
 
 
