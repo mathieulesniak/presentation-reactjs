@@ -10,7 +10,3 @@ function counter_add(add_value) {
     value: add_value
   };
 }
-
-
-
-

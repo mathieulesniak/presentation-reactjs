@@ -47,6 +47,7 @@ const images = {
   coke: require('../assets/coke.jpg'),
   mentos: require('../assets/mentos.jpg'),
   cokementos: require('../assets/mentoscoke.gif'),
+  reduxMiddleware: require('../assets/middleware.png'),
   city: require("../assets/city.jpg"),
   kat: require("../assets/kat.png"),
   logo: require("../assets/formidable-logo.svg"),
@@ -246,7 +247,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <Image src={images.reduxLogo.replace('/', '')} />
+            <Image src={images.reduxLogo.replace('/', '')} width="40%"/>
             <List>
               <ListItem>Expérimentation de Dan Abramov (ReactEurope 2015)</ListItem>
               <Appear><ListItem>Inspiration d'ELM (langage purement fonctionnel)</ListItem></Appear>
@@ -254,39 +255,40 @@ export default class Presentation extends React.Component {
             </List>
             <Layout fit>
               <Appear><Fill>
-                <Image src={images.coke.replace('/','')} width="80%"/>
+                <Image src={images.coke.replace('/','')} width="50%"/>
                 <Text>Mutabilité</Text>
               </Fill></Appear>
               <Appear><Fill>
-                <Image src={images.mentos.replace('/','')} width="80%"/>
+                <Image src={images.mentos.replace('/','')} width="50%"/>
                 <Text>Asynchronisme</Text>
-              </Fill></Appear>
-              <Appear><Fill>
-                <Image src={images.cokementos.replace('/','')} width="80%"/>
-                <Text>Les 2</Text>
               </Fill></Appear>
             </Layout>
           </Slide>
 
           <Slide>
-            <Heading textColor="secondary">3 principes</Heading>
+            <Image src={images.cokementos.replace('/','')} width="50%"/>
+            <Text>Mutablité + Asynchronisme</Text>
+          </Slide>
+
+          <Slide>
+            <Heading textColor="secondary" size={4}>3 principes</Heading>
             <Layout fit>
               <Appear><Fill>
-                <Text>State</Text>
+                Single source of truth: State
                 <CodePane
                   lang="js"
                   source={require("raw!../assets/state.example")}
                 />
               </Fill></Appear>
               <Appear><Fill>
-                <Text>Actions</Text>
+                State read-only: Actions
                 <CodePane
                   lang="js"
                   source={require("raw!../assets/actions.example")}
                 />
               </Fill></Appear>
               <Appear><Fill>
-                <Text>Reducers</Text>
+                Pure functions: Reducers
                 <CodePane
                   lang="js"
                   source={require("raw!../assets/reducers.example")}
@@ -295,26 +297,10 @@ export default class Presentation extends React.Component {
             </Layout>
           </Slide>
 
-
           <Slide>
-            <Heading textColor="secondary" size={4}>Le principe : </Heading>
-            <CodePane
-              lang="jsx"
-              source="(previousState, action) => newState"
-              margin="20px auto"
-            />
+            <Image src={images.reduxMiddleware.replace('/', '')} />
+            <Text>source: visual-engin.com</Text>
           </Slide>
-
-          <Slide>
-            <Image src={images.reduxCycle.replace('/', '')} />
-            <Text>source: css-tricks.com</Text>
-          </Slide>
-
-          <Slide>
-            <Heading textColor="secondary" caps>Store : single source of Truth</Heading>
-          </Slide>
-
-
 
           <Slide>
             <Heading textColor="secondary">Merci !</Heading>
