@@ -309,9 +309,8 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <Text>Mutablité + Asynchronisme</Text>
-            <Image src="/mentoscoke.gif" width="40%"/>
-            <Appear><Image src={images.functional.replace('/','')} width="100%"/></Appear>
+            <Text>Mutablité + Asynchronisme =</Text>
+            <Image src="/mentoscoke.gif" width="60%"/>
           </Slide>
 
           <Slide>
@@ -358,13 +357,6 @@ export default class Presentation extends React.Component {
                 />
               </Fill></Appear>
               <Appear><Fill>
-                CrashReport
-                <CodePane
-                  lang="js"
-                  source={require("raw!../assets/middlewareCrashreporter.example")}
-                />
-              </Fill></Appear>
-              <Appear><Fill>
                 Delay
                 <CodePane
                   lang="js"
@@ -376,7 +368,7 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <Heading textColor="secondary">Et demain ?</Heading>
-            <Image src={images.minusCortex.replace('/', '')} width="80%"/>
+            <Image src={images.minusCortex.replace('/', '')} width="75%"/>
           </Slide>
 
           <Slide>
