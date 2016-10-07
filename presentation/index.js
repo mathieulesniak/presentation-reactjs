@@ -38,8 +38,14 @@ require("spectacle/lib/themes/default/index.css");
 
 const images = {
   logoWina: require('../assets/logo-winamax.png'),
+  avatarJdn: require('../assets/avatar-jdn.jpg'),
+  avatarMlk: require('../assets/avatar-mlk.jpg'),
   difficult: require('../assets/difficult.png'),
   dontBelieve: require('../assets/dontbelieve.gif'),
+  scuTab: require('../assets/scu-tableau.png'),
+  scuBad: require('../assets/scu-bad.png'),
+  scuGood: require('../assets/scu-good.png'),
+  beamMeUp: require('../assets/keep-calm-and-beam-me-up-scotty-19.png'),
   reduxLogo: require('../assets/redux-logo.png'),
   reduxCycle: require('../assets/redux-cycle.svg'),
   virtualDom: require('../assets/virtual-dom-update.png'),
@@ -66,7 +72,7 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Spectacle theme={theme}>
-        <Deck transition={["zoom", "slide"]} transitionDuration={500}>
+        <Deck transition={["slide"]} transitionDuration={500}>
           <Slide transition={["zoom"]} bgColor="primary">
           <Image src={images.logoWina.replace("/", "")} margin="0px auto 40px" height="121px"/>
             <Heading size={1} fit caps lineHeight={2} textColor="black">
@@ -83,9 +89,15 @@ export default class Presentation extends React.Component {
             <Layout>
               <Fill>
                 Julien Déléan
+                <br/>@Chabou69
+                <br/><Image src={images.avatarJdn.replace("/", "")} height="150px"/>
+                <br/>Développements applicatifs clients
               </Fill>
               <Fill>
                 Mathieu Lesniak
+                <br/>@mathieulesniak
+                <br/><Image src={images.avatarMlk.replace("/", "")} height="150px"/>
+                <br/>Développements frontend & betting
               </Fill>
             </Layout>
           </Slide>
@@ -103,7 +115,8 @@ export default class Presentation extends React.Component {
             <Heading textColor="secondary">Qui l'utilise ?</Heading>
             <List>
               <ListItem>Apple (developer portal)</ListItem>
-              <ListItem>AirBNB, </ListItem>
+              <ListItem>Wallmart</ListItem>
+              <ListItem>AirBNB</ListItem>
               <ListItem>Netflix</ListItem>
               <ListItem>BBC (module de recherche)</ListItem>
               <ListItem>Yahoo Mail</ListItem>
@@ -206,7 +219,7 @@ export default class Presentation extends React.Component {
           <Slide>
             <Heading textColor="secondary" fit>Rappel sur les best practices pour le DOM</Heading>
             <List>
-              <Appear><ListItem>On n'effectue pas de grosse opérations sur le DOM</ListItem></Appear>
+              <Appear><ListItem>On n'effectue pas de grosses opérations sur le DOM</ListItem></Appear>
               <Appear><ListItem>On limite les accès au DOM</ListItem></Appear>
               <Appear><ListItem>On modifie des éléments avant de les ajouter au DOM</ListItem></Appear>
             </List>
@@ -228,12 +241,34 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <Heading textColor="secondary" fit>Cycle de vie des composants</Heading>
-            <Heading textColor="secondary" fit>ShouldComponentUpdate()</Heading>
+            <List>
+              <ListItem>componentWillMount</ListItem>
+              <ListItem>componentDidMount</ListItem>
+              <ListItem>componentWillReceiveProps</ListItem>
+              <ListItem><b>shouldComponentUpdate</b></ListItem>
+              <ListItem>componentWillUpdate</ListItem>
+            </List>
+          </Slide>
+
+          <Slide>
+            <Heading textColor="secondary" fit>shouldComponentUpdate()</Heading>
+            <Image src={images.scuTab.replace('/', '')} />
+            <Layout>
+              <Fill>
+                <Text>Avant</Text>
+                <Image src={images.scuBad.replace('/', '')} />
+              </Fill>
+              <Fill>
+                <Text>Après</Text>
+                <Image src={images.scuGood.replace('/', '')} />
+              </Fill>
+            </Layout>
           </Slide>
 
           <Slide>
             <Heading textColor="secondary" size={4} fit>Donc, nous avons un modèle descendant</Heading>
-            <Heading size={4} textColor="secondary" fit lineHeight={4}>Mais comment fait-on pour remonter ?</Heading>
+            <Image src={images.beamMeUp.replace('/', '')} width="40%"/>
+            <Heading size={4} textColor="secondary" fit >Mais comment fait-on pour remonter ?</Heading>
           </Slide>
 
           <Slide transition={["slide"]}>
@@ -304,6 +339,8 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <Heading textColor="secondary">Merci !</Heading>
+            <Text>Venez nous voir, chez Winamax, nous adorons ReactJS, et nous avons pleins de projets sympas à réaliser</Text>
+            <Text><br/>PS : cette présentation tourne sous ReactJS ;)</Text>
           </Slide>
 
           <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
