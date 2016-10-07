@@ -308,7 +308,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <Image src={images.cokementos.replace('/','')} width="50%"/>
+            <Image src={images.cokementos.replace('/','')} width="60%"/>
             <Text>Mutablité + Asynchronisme</Text>
           </Slide>
 
@@ -339,18 +339,42 @@ export default class Presentation extends React.Component {
             </Layout>
           </Slide>
 
-
-
-
           <Slide>
+            <Heading textColor="secondary">Fonctionnement</Heading>
             <Image src={images.reduxMiddleware.replace('/', '')} />
             <Text>source: visual-engin.com</Text>
           </Slide>
 
           <Slide>
+            <Heading textColor="secondary">Middlewares</Heading>
+            <Layout fit>
+              <Appear><Fill>
+                Logger
+                <CodePane
+                  lang="js"
+                  source={require("raw!../assets/middlewareLogger.example")}
+                />
+              </Fill></Appear>
+              <Appear><Fill>
+                CrashReport
+                <CodePane
+                  lang="js"
+                  source={require("raw!../assets/middlewareCrashreporter.example")}
+                />
+              </Fill></Appear>
+              <Appear><Fill>
+                Delay
+                <CodePane
+                  lang="js"
+                  source={require("raw!../assets/middlewareDelay.example")}
+                />
+              </Fill></Appear>
+            </Layout>
+          </Slide>
+
+          <Slide>
             <Heading textColor="secondary">Et demain ?</Heading>
             <Image src={images.catConquer.replace('/', '')} />
-
           </Slide>
 
           <Slide>
@@ -365,7 +389,7 @@ export default class Presentation extends React.Component {
             <Text><br/>PS : cette présentation a été réalisée sous ReactJS ;)</Text>
           </Slide>
 
-          
+
         </Deck>
       </Spectacle>
     );

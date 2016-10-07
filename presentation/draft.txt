@@ -83,6 +83,13 @@ http://fr.slideshare.net/AndrewHull/react-js-and-why-its-awesome
     - Chaine de reducer : (previousState, action) => newState
     - Middleware avant et après les reducers
 
+- Middlewares
+    + Logger
+    + CrashReport
+    + Delay
+
+
+
 - Redux + React
     - @Connect pour remplacer le state et dispatch d'action
 
@@ -94,10 +101,7 @@ http://fr.slideshare.net/AndrewHull/react-js-and-why-its-awesome
     - Architecture modulaire (plugins)
     - Voyage dans le temps / Bugtracking
 
-- Middlewares
-    + Logger
-    + CrashReport
-    + Delay
+
 
 
 - Principe : (previousState, action) => newState
