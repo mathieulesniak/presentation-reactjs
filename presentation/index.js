@@ -54,6 +54,7 @@ const images = {
   coke: require('../assets/coke.jpg'),
   mentos: require('../assets/mentos.jpg'),
   cokementos: require('../assets/mentoscoke.gif'),
+  functional: require('../assets/functional.png'),
   reduxMiddleware: require('../assets/middleware.png'),
   catConquer: require('../assets/cat-conquer.jpg'),
   reactNative: require('../assets/reactnative.png'),
@@ -82,7 +83,6 @@ export default class Presentation extends React.Component {
       <Spectacle theme={theme}>
         <Deck transition={["slide"]} transitionDuration={500}>
           <Slide transition={["zoom"]} bgColor="primary">
-          <Image src={images.logoWina.replace("/", "")} margin="0px auto 40px" height="121px"/>
             <Heading size={1} fit caps lineHeight={2} textColor="black">
               ReactJS / Redux
             </Heading>
@@ -309,8 +309,9 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <Image src={images.cokementos.replace('/','')} width="60%"/>
             <Text>Mutablité + Asynchronisme</Text>
+            <Image src={images.cokementos.replace('/','')} width="40%" />
+            <Appear><Image src={images.functional.replace('/','')} width="100%"/></Appear>
           </Slide>
 
           <Slide>
@@ -348,7 +349,7 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <Heading textColor="secondary">Middlewares</Heading>
-            <Layout fit>
+            <Layout>
               <Appear><Fill>
                 Logger
                 <CodePane
@@ -384,7 +385,6 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <Image src={images.logoWina.replace("/", "")} margin="0px auto 40px" height="121px"/>
             <Heading textColor="secondary">Merci !</Heading>
             <Text>Venez nous voir, chez Winamax, nous adorons ReactJS, et nous avons pleins de projets sympas à réaliser</Text>
             <Text><br/>PS : cette présentation a été réalisée sous ReactJS ;)</Text>

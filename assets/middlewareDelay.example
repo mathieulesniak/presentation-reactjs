@@ -1,4 +1,4 @@
-const delayScheduler = store => next => action => {
+const scheduler = store => next => action => {
   if (!action.meta || !action.meta.delay) {
     return next(action);
   }
