@@ -55,7 +55,7 @@ const images = {
   mentos: require('../assets/mentos.jpg'),
   cokementos: require('../assets/mentoscoke.gif'),
   reduxMiddleware: require('../assets/middleware.png'),
-  catConquer: require('../assets/cat-conquer.jpg'),
+  minusCortex: require('../assets/minus-cortex.jpg'),
   reactNative: require('../assets/reactnative.png'),
 
   city: require("../assets/city.jpg"),
@@ -154,7 +154,7 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <Heading textColor="secondary" fit>Et donc, c'est difficile ?</Heading>
-            <Image src={images.difficult.replace('/', '')} />
+            <Image src={images.difficult.replace('/', '')} width="80%"/>
           </Slide>
 
           <Slide>
@@ -221,7 +221,7 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <Heading textColor="secondary" fit>On nous aurait donc menti ?</Heading>
-            <Image src={images.dontBelieve.replace('/', '')} />
+            <Image src="/dontbelieve.gif" width="70%" />
           </Slide>
 
           <Slide>
@@ -309,7 +309,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <Image src={images.cokementos.replace('/','')} width="60%"/>
+            <Image src="/mentoscoke.gif" width="60%"/>
             <Text>Mutablité + Asynchronisme</Text>
           </Slide>
 
@@ -348,7 +348,7 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <Heading textColor="secondary">Middlewares</Heading>
-            <Layout fit>
+            <Layout fill>
               <Appear><Fill>
                 Logger
                 <CodePane
@@ -375,7 +375,7 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <Heading textColor="secondary">Et demain ?</Heading>
-            <Image src={images.catConquer.replace('/', '')} />
+            <Image src={images.minusCortex.replace('/', '')} width="80%"/>
           </Slide>
 
           <Slide>
