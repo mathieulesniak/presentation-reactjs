@@ -85,14 +85,10 @@ http://fr.slideshare.net/AndrewHull/react-js-and-why-its-awesome
 
 - Middlewares
     + Logger
-    + CrashReport
     + Delay
-
-
 
 - Redux + React
     - @Connect pour remplacer le state et dispatch d'action
-
 
 - Avantages
     - Pas du tout lié à React : redux.net, redux.rb
@@ -101,39 +97,8 @@ http://fr.slideshare.net/AndrewHull/react-js-and-why-its-awesome
     - Architecture modulaire (plugins)
     - Voyage dans le temps / Bugtracking
 
+- Demo TimeTravel
 
-
-
-- Principe : (previousState, action) => newState
-- description Flux / Redux + diagramme
-    - components + actions creator -> dispatch -> reducer -> store -> view
-    - décrire brievement chaque partie, notamment le store
-- SINGLE SOURCE OF TRUTH
-- C'est quoi une action ?
-- const action = {type: 'ADD_TODO', text: 'Finir la présentation React'}
-- C'est quoi un action creator ?
-- fonction helper pour éviter d'écrire des object
-    - function addTodo(text) {
-        return {type: 'ADD_TODO', text};
-    }
-    (NOTE ES6 shorthand)
-    - <button onClick={dispatch(addTodo('Finir la prez'))}>Ajouter un TODO</button>
-- Et on met ça où ma bonne dame ?
-- Reducer !
-    - exemple de reducer
-    - un reducer créé un nouveau state, il ne le modifie pas !
-- Anatomie d'une app simple
-    - <Provider>
-    - connect()
-
-- Résumé
-    - state / predictable behaviour
-    - (previousState, action) => newState
-
-- Démo time travel ?
-- Et l'asynchrone dans tout ça ?
-- middleware API REST
-- Saga (compliqué...)
 
 
 - ouverture vers react native
