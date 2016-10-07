@@ -386,8 +386,9 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <Heading textColor="secondary">Merci !</Heading>
-            <Text>Venez nous voir, chez Winamax, nous adorons ReactJS, et nous avons pleins de projets sympas à réaliser</Text>
-            <Text><br/>PS : cette présentation a été réalisée sous ReactJS ;)</Text>
+            <Text>Venez nous voir, chez Winamax, nous adorons ReactJS.
+            <br/>Nous avons plein de projets sympas à réaliser !</Text>
+            <video src="/winamax.mp4" width="800px" autoPlay controls loop muted/>
           </Slide>
 
 
