@@ -54,6 +54,9 @@ const images = {
   mentos: require('../assets/mentos.jpg'),
   cokementos: require('../assets/mentoscoke.gif'),
   reduxMiddleware: require('../assets/middleware.png'),
+  catConquer: require('../assets/cat-conquer.jpg'),
+  reactNative: require('../assets/reactnative.png'),
+
   city: require("../assets/city.jpg"),
   kat: require("../assets/kat.png"),
   logo: require("../assets/formidable-logo.svg"),
@@ -332,15 +335,30 @@ export default class Presentation extends React.Component {
             </Layout>
           </Slide>
 
+
+
+
           <Slide>
             <Image src={images.reduxMiddleware.replace('/', '')} />
             <Text>source: visual-engin.com</Text>
           </Slide>
 
           <Slide>
+            <Heading textColor="secondary">Et demain ?</Heading>
+            <Image src={images.catConquer.replace('/', '')} />
+
+          </Slide>
+
+          <Slide>
+            <Heading textColor="secondary">En avant vers le mobile :</Heading>
+            <Image src={images.reactNative.replace('/', '')} />
+          </Slide>
+
+          <Slide>
+            <Image src={images.logoWina.replace("/", "")} margin="0px auto 40px" height="121px"/>
             <Heading textColor="secondary">Merci !</Heading>
             <Text>Venez nous voir, chez Winamax, nous adorons ReactJS, et nous avons pleins de projets sympas à réaliser</Text>
-            <Text><br/>PS : cette présentation tourne sous ReactJS ;)</Text>
+            <Text><br/>PS : cette présentation a été réalisée sous ReactJS ;)</Text>
           </Slide>
 
           <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
