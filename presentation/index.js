@@ -96,16 +96,16 @@ export default class Presentation extends React.Component {
             <Heading textColor="secondary">Qui sommes nous ?</Heading>
             <Layout>
               <Fill>
-                <b>Julien Déléan</b>
-                <br/><Image src={images.twitterLogo.replace("/", "")} height="0.8em" margin="0"/>@Chabou69
-                <br/><Image src={images.avatarJdn.replace("/", "")} height="150px"/>
-                <br/>Développements applicatifs clients
-              </Fill>
-              <Fill>
                 <b>Mathieu Lesniak</b>
                 <br/><Image src={images.twitterLogo.replace("/", "")} height="0.8em" margin="0"/>@mathieulesniak
                 <br/><Image src={images.avatarMlk.replace("/", "")} height="150px"/>
                 <br/>Développements frontend & betting
+              </Fill>
+              <Fill>
+                <b>Julien Déléan</b>
+                <br/><Image src={images.twitterLogo.replace("/", "")} height="0.8em" margin="0"/>@Chabou69
+                <br/><Image src={images.avatarJdn.replace("/", "")} height="150px"/>
+                <br/>Développements applicatifs clients
               </Fill>
             </Layout>
           </Slide>
