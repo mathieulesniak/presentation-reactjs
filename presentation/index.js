@@ -174,16 +174,21 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <CodePane
-              lang="jsx"
-              source={require("raw!../assets/jsx.example")}
-              margin="20px auto"
-            />
-            <CodePane
-              lang="jsx"
-              source={require("raw!../assets/jsx2.example")}
-              margin="20px auto"
-            />
+            <Layout>
+              <Fill>
+                <CodePane
+                  lang="jsx"
+                  source={require("raw!../assets/jsx.example")}
+                />
+              </Fill>
+              <Fill> </Fill>
+              <Fill>
+                <CodePane
+                  lang="jsx"
+                  source={require("raw!../assets/jsx2.example")}
+                />
+              </Fill>
+            </Layout>
             <CodePane
               lang="jsx"
               source={require("raw!../assets/jsx-composed.example")}
@@ -216,7 +221,7 @@ export default class Presentation extends React.Component {
 
 
           <Slide>
-            <Heading textColor="secondary">Render() à chaque update</Heading>
+            <Heading textColor="secondary" fit>Render() à chaque update</Heading>
           </Slide>
 
           <Slide>
