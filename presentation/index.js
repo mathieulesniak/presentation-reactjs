@@ -69,6 +69,10 @@ const theme = createTheme({
   primary: "#F0F0F0",
   secondary: "black",
   quartenary: "black"
+}, {
+  primary: "Open Sans Condensed",
+  secondary: "Open Sans Condensed",
+  tertiary: "monospace"
 });
 
 export default class Presentation extends React.Component {
