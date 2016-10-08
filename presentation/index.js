@@ -351,8 +351,8 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <Heading textColor="secondary">Fonctionnement</Heading>
-            <Image src={images.reduxMiddleware.replace('/', '')} />
-            <Text>source: visual-engin.com</Text>
+            <Image src={images.reduxMiddleware.replace('/', '')} width="850px"/>
+            <Text textSize={14}>source: visual-engin.com</Text>
           </Slide>
 
           <Slide>
