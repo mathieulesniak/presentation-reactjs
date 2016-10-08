@@ -4,25 +4,20 @@ import { counterAdd, counterReset } from './actionCreators'
 
 class Counter extends React.Component {
   render(){
-    const { count, add, reset } = this.props;
+    const { count, add, reset, dispatch } = this.props;
     return (
       <div className="my-component">
         <h1>Count: {count}</h1>
-        <button type="button" onClick={add}>Increment</button>
-        <button type="button" onClick={reset}>Reset</button>
+        <button onClick={()=>dispatch(counterAdd(1))}>Increment</button>
+        <button onClick={()=>dispatch(counterReset())}>Reset</button>
       </div>
 );}}
 
 const mapStateToProps = (state) => ({
   count: state.counter
 });
-const mapDispatchToProps = {
-  add: counterAdd,
-  reset: counterReset
-};
 
 const ConnectedCounter = connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mapStateToProps
 )(Counter)
 export default ConnectedCounter;

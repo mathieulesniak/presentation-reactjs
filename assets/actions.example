@@ -1,12 +1,14 @@
 // Action
 {
-  type: "COUNTER_RESET"
+  type: "COUNTER_RESET",
+  ts: Date.now()
 }
 
 // Action Creator
 function counterAdd(add_value) {
   return {
     type: "COUNTER_ADD",
-    value: add_value
+    value: add_value,
+    ts: Date.now()
   };
 }

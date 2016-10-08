@@ -20,8 +20,8 @@ class Counter extends React.Component {
     return (
       <div className="my-component">
         <h1>Count: {this.state.count}</h1>
-        <button type="button" onClick={this.incCount}>Increment</button>
-        <button type="button" onClick={this.resetCount}>Reset</button>
+        <button onClick={this.incCount}>Increment</button>
+        <button onClick={this.resetCount}>Reset</button>
       </div>
 );}}
 

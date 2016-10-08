@@ -15,7 +15,7 @@ function updateReducer(state = {}, action) {
     case "COUNTER_ADD":
     case "COUNTER_RESET":
       state = {
-        last: Date.now(),
+        last: action.ts,
         count: state.count + 1
       };
       break;

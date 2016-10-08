@@ -438,7 +438,7 @@ export default class Presentation extends React.Component {
                 <CodePane
                   lang="jsx"
                   source={require("raw!../assets/counter.example")}
-                  margin="0px 0px 0px -38px"
+                  margin="0px 0px 0px -25px"
                 />
               </Fill>
               <Fill>
@@ -460,7 +460,7 @@ export default class Presentation extends React.Component {
             <Heading textColor="secondary">Avantages</Heading>
             <List>
               <ListItem>Léger (2KB) et sans magie noire</ListItem>
-              <Appear><ListItem>Pas une librairieg mais une philosophie (redux.net, redux.rb)</ListItem></Appear>
+              <Appear><ListItem>Pas une librairie mais une philosophie (redux.net, redux.rb)</ListItem></Appear>
               <Appear><ListItem>Parfait complément de React (Immutabilité)</ListItem></Appear>
               <Appear><ListItem>Comportement déterministe et prédictible</ListItem></Appear>
               <Appear><ListItem>Tests unitaires triviaux</ListItem></Appear>
