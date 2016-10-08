@@ -345,7 +345,7 @@ export default class Presentation extends React.Component {
             <Text>(Unidirectionnal Data Flow)</Text>
             <Appear><Image src={images.flux.replace('/', '')} width="100%"/></Appear>
             <List>
-              <Appear><ListItem>Pas de library officielle, uniquement le Dispatcher</ListItem></Appear>
+              <Appear><ListItem>Pas de librairie officielle, uniquement le Dispatcher</ListItem></Appear>
               <Appear><ListItem><Text>Flummox, Alt, Reflux, MartyJS, Delorean, Fluxxor...</Text></ListItem></Appear>
             </List>
           </Slide>
@@ -460,7 +460,7 @@ export default class Presentation extends React.Component {
             <Heading textColor="secondary">Avantages</Heading>
             <List>
               <ListItem>Léger (2KB) et sans magie noire</ListItem>
-              <Appear><ListItem>Pas une library mais une philosophie (redux.net, redux.rb)</ListItem></Appear>
+              <Appear><ListItem>Pas une librairieg mais une philosophie (redux.net, redux.rb)</ListItem></Appear>
               <Appear><ListItem>Parfait complément de React (Immutabilité)</ListItem></Appear>
               <Appear><ListItem>Comportement déterministe et prédictible</ListItem></Appear>
               <Appear><ListItem>Tests unitaires triviaux</ListItem></Appear>
