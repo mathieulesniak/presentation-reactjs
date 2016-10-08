@@ -41,6 +41,7 @@ const images = {
   avatarJdn: require('../assets/avatar-jdn.jpg'),
   avatarMlk: require('../assets/avatar-mlk.jpg'),
   twitterLogo: require('../assets/twitter-logo.png'),
+  reactLogo: require('../assets/react-logo.png'),
   difficult: require('../assets/difficult.png'),
   dontBelieve: require('../assets/dontbelieve.gif'),
   scuTab: require('../assets/scu-tableau.png'),
@@ -111,7 +112,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <Heading textColor="secondary" caps>Timeline</Heading>
+            <br/><Image src={images.reactLogo.replace("/", "")} height="150px"/>
             <List>
               <ListItem>Avril 2012 rachat d'Instagram.com</ListItem>
               <ListItem>Refonte / intégration au sein de Facebook</ListItem>
