@@ -407,7 +407,7 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>Léger (2KB) et sans magie noire</ListItem></Appear>
               <Appear><ListItem>Pas une library mais une philosophie (redux.net, redux.rb)</ListItem></Appear>
               <Appear><ListItem>Parfaitement fait pour React (Immutabilité)</ListItem></Appear>
-              <Appear><ListItem>Comportement déterministe et predictible</ListItem></Appear>
+              <Appear><ListItem>Comportement déterministe et prédictible</ListItem></Appear>
               <Appear><ListItem>Tests unitaires triviaux</ListItem></Appear>
               <Appear><ListItem>Architecture modulaire (plugins)</ListItem></Appear>
               <Appear><ListItem>Bugtracking / Voyage dans le temps</ListItem></Appear>
