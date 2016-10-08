@@ -4,7 +4,7 @@ import { counterAdd, counterReset } from './actionCreators'
 
 class Counter extends React.Component {
   render(){
-    const { count, add, reset, dispatch } = this.props;
+    const { count, dispatch } = this.props;
     return (
       <div className="my-component">
         <h1>Count: {count}</h1>
