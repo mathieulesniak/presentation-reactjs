@@ -104,7 +104,7 @@ http://fr.slideshare.net/AndrewHull/react-js-and-why-its-awesome
 - Références
     + EggHead.io
     + Create React App (https://github.com/facebookincubator/create-react-app)
-    + @dan_abramov et ?
+    + @dan_abramov,  @reactjs, @Vjeux, @sebmarkbage
     + ReactEurope
     + MUST SEE: Render 2016: Lee Byron 
 
