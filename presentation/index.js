@@ -232,13 +232,13 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-          <Layout>
-            <Fill>
-              <CodePane
-                lang="jsx"
-                source={require("raw!../assets/counter.example")}
-                margin="20px auto"
-              />
+            <Layout>
+              <Fill>
+                <CodePane
+                  lang="jsx"
+                  source={require("raw!../assets/counter.example")}
+                  margin="20px auto"
+                />
               </Fill>
               <Fill>
                 <Counter />
@@ -398,6 +398,26 @@ export default class Presentation extends React.Component {
                   margin="0px 0px 0px 2px"
                 />
               </Fill></Appear>
+            </Layout>
+          </Slide>
+
+          <Slide>
+            <Heading textColor="secondary" size={4}>React-Redux</Heading>
+            <Layout>
+              <Fill>
+                <CodePane
+                  lang="jsx"
+                  source={require("raw!../assets/counter.example")}
+                  margin="0px 0px 0px -38px"
+                />
+              </Fill>
+              <Fill>
+                <CodePane
+                  lang="jsx"
+                  source={require("raw!../assets/counter-redux.example")}
+                  margin="0px 0px 0px 2px"
+                />
+              </Fill>
             </Layout>
           </Slide>
 

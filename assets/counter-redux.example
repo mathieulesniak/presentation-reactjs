@@ -1,0 +1,28 @@
+import React from 'react';
+import { connect } from 'react-redux';
+import { counterAdd, counterReset } from './actionCreators'
+
+class Counter extends React.Component {
+  render(){
+    const { count, add, reset } = this.props;
+    return (
+      <div className="my-component">
+        <h1>Count: {count}</h1>
+        <button type="button" onClick={add}>Increment</button>
+        <button type="button" onClick={reset}>Reset</button>
+      </div>
+);}}
+
+const mapStateToProps = (state) => ({
+  count: state.counter
+});
+const mapDispatchToProps = {
+  add: counterAdd,
+  reset: counterReset
+};
+
+const ConnectedCounter = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Counter)
+export default ConnectedCounter;
