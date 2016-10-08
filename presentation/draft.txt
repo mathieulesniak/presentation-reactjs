@@ -99,8 +99,14 @@ http://fr.slideshare.net/AndrewHull/react-js-and-why-its-awesome
 
 - Demo TimeTravel
 
-
-
 - ouverture vers react native
+
+- Références
+    + EggHead.io
+    + Create React App (https://github.com/facebookincubator/create-react-app)
+    + @dan_abramov et ?
+    + ReactEurope
+    + MUST SEE: Render 2016: Lee Byron 
+
 - Des questions ? viendez chez nous, on kiffe react, et on est pas prêts de s'arrêter !
 -- Ah au fait, cette prez tourne sous ReactJS ;)
