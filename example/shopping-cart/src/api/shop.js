@@ -3,7 +3,7 @@
  */
 import _products from './products.json'
 
-const TIMEOUT = 100
+const TIMEOUT = 25
 
 export default {
   getProducts: (cb, timeout) => setTimeout(() => cb(_products), timeout || TIMEOUT),
