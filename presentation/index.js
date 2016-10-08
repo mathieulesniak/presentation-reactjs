@@ -38,6 +38,8 @@ require("spectacle/lib/themes/default/index.css");
 
 const images = {
   logoWina: require('../assets/logo-winamax.png'),
+  reduxLogoOnly: require('../assets/redux-logo-only.png'),
+  reactLogoOnly: require('../assets/react-logo-only.png'),
   avatarJdn: require('../assets/avatar-jdn.jpg'),
   avatarMlk: require('../assets/avatar-mlk.jpg'),
   twitterLogo: require('../assets/twitter-logo.png'),
@@ -86,10 +88,23 @@ export default class Presentation extends React.Component {
       <Spectacle theme={theme}>
         <Deck transition={["slide"]} transitionDuration={500}>
           <Slide transition={["zoom"]} bgColor="primary">
-            <Heading size={1} fit caps lineHeight={2} textColor="black">
-              ReactJS / Redux
-            </Heading>
-            <Heading size={1} fit caps textColor="secondary">
+            <Layout>
+              <Fill>
+                <Image src={images.reactLogoOnly.replace("/", "")} height="200px" margin="-80px 0px 0px 0px"/>
+              </Fill>
+              <Fill>
+                <Image src={images.reduxLogoOnly.replace('/', '')} height="180px" margin="-70px 0px 0px 0px"/>
+              </Fill>
+            </Layout>
+            <Layout>
+              <Fill>
+                <Text textSize="3em" bold>React</Text>
+              </Fill>
+              <Fill>
+                <Text textSize="3em" bold>Redux</Text>
+              </Fill>
+            </Layout>
+            <Heading size={1} fit caps textColor="secondary" margin="50px 0px 0px 0px">
               Découverte et mise en œuvre @ Winamax
             </Heading>
 
