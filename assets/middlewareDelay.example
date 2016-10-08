@@ -1,11 +1,11 @@
 const scheduler = store => next => action => {
-  if (!action.meta || !action.meta.delay) {
+  if (!action.delay) {
     return next(action);
   }
 
   let timeoutId = setTimeout(
     () => next(action),
-    action.meta.delay
+    action.delay
   );
 
   return function cancel() {

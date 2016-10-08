@@ -358,18 +358,19 @@ export default class Presentation extends React.Component {
           <Slide>
             <Heading textColor="secondary">Middlewares</Heading>
             <Layout>
-              <Appear><Fill>
+              <Fill>
                 Logger
                 <CodePane
                   lang="js"
                   source={require("raw!../assets/middlewareLogger.example")}
                 />
-              </Fill></Appear>
+              </Fill>
               <Appear><Fill>
                 Delay
                 <CodePane
                   lang="js"
                   source={require("raw!../assets/middlewareDelay.example")}
+                  margin="0px 0px 0px 2px"
                 />
               </Fill></Appear>
             </Layout>
