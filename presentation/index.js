@@ -404,7 +404,7 @@ export default class Presentation extends React.Component {
             <Heading textColor="secondary">Références</Heading>
             <List>
               <ListItem><Image src={images.eggheadLogo.replace("/", "")} height="0.8em" margin="0"/> EggHead.io</ListItem>
-              <ListItem><Image src={images.githubLogo.replace("/", "")} height="0.8em" margin="0"/> Create React App (https://github.com/facebookincubator/create-react-app)</ListItem>
+              <ListItem><Image src={images.githubLogo.replace("/", "")} height="0.8em" margin="0"/> Create React App <span style={{fontSize:"0.7em"}}>https://github.com/facebookincubator/create-react-app</span></ListItem>
               <ListItem><Image src={images.twitterLogo.replace("/", "")} height="0.8em" margin="0"/> @dan_abramov,  @reactjs, @Vjeux, @sebmarkbage</ListItem>
               <ListItem><Image src={images.reactEuropeLogo.replace("/", "")} height="0.8em" margin="0"/> ReactEurope</ListItem>
               <ListItem><Image src={images.youtubeLogo.replace("/", "")} height="0.8em" margin="0"/> MUST SEE: Render 2016: Lee Byron</ListItem>
