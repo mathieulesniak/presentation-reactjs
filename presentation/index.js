@@ -61,6 +61,7 @@ const images = {
   cokementos: require('../assets/mentoscoke.gif'),
   functional: require('../assets/functional.png'),
   reduxMiddleware: require('../assets/middleware.png'),
+  delorean: require('../assets/delorean.jpg'),
   minusCortex: require('../assets/minus-cortex.jpg'),
   reactNative: require('../assets/reactnative.png'),
 
@@ -400,8 +401,13 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>Comportement déterministe et predictible</ListItem></Appear>
               <Appear><ListItem>Tests unitaires triviaux</ListItem></Appear>
               <Appear><ListItem>Architecture modulaire (plugins)</ListItem></Appear>
-              <Appear><ListItem>Voyage dans le temps / Bugtracking</ListItem></Appear>
+              <Appear><ListItem>Bugtracking / Voyage dans le temps</ListItem></Appear>
             </List>
+          </Slide>
+
+          <Slide>
+            <Heading textColor="secondary">Redux Dev Tools</Heading>
+            <Image src={images.delorean.replace('/', '')} margin="30px 0 0 0" width="650px"/>
           </Slide>
 
           <Slide>
