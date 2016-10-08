@@ -222,7 +222,7 @@ export default class Presentation extends React.Component {
             <Heading textColor="black" fit>les composants enfants ne peuvent les modifier</Heading>
           </Slide>
 
-          <Slide>
+          <Slide notes="On ne stocke pas le données calculées, on ne duplique pas les données => Single Source of Truth">
             <Heading textColor="black" size={2}>Les composants sont des machines à état</Heading>
             <List>
               <ListItem>Le state contient les données modifiables par le composant</ListItem>
