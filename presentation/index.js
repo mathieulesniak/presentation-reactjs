@@ -42,6 +42,10 @@ const images = {
   avatarMlk: require('../assets/avatar-mlk.jpg'),
   twitterLogo: require('../assets/twitter-logo.png'),
   reactLogo: require('../assets/react-logo.png'),
+  githubLogo: require('../assets/GitHub-Mark-120px-plus.png'),
+  eggheadLogo: require('../assets/egghead.png'),
+  reactEuropeLogo: require('../assets/reacteurope.png'),
+  youtubeLogo: require('../assets/YouTube-icon-full_color.png'),
   difficult: require('../assets/difficult.png'),
   dontBelieve: require('../assets/dontbelieve.gif'),
   scuTab: require('../assets/scu-tableau.png'),
@@ -60,10 +64,7 @@ const images = {
   minusCortex: require('../assets/minus-cortex.jpg'),
   reactNative: require('../assets/reactnative.png'),
 
-  city: require("../assets/city.jpg"),
-  kat: require("../assets/kat.png"),
   logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png")
 };
 
 preloader(images);
@@ -397,6 +398,17 @@ export default class Presentation extends React.Component {
           <Slide>
             <Heading textColor="secondary">En avant vers le mobile :</Heading>
             <Image src={images.reactNative.replace('/', '')} />
+          </Slide>
+
+          <Slide>
+            <Heading textColor="secondary">Références</Heading>
+            <List>
+              <ListItem><Image src={images.eggheadLogo.replace("/", "")} height="0.8em" margin="0"/> EggHead.io</ListItem>
+              <ListItem><Image src={images.githubLogo.replace("/", "")} height="0.8em" margin="0"/> Create React App (https://github.com/facebookincubator/create-react-app)</ListItem>
+              <ListItem><Image src={images.twitterLogo.replace("/", "")} height="0.8em" margin="0"/> @dan_abramov,  @reactjs, @Vjeux, @sebmarkbage</ListItem>
+              <ListItem><Image src={images.reactEuropeLogo.replace("/", "")} height="0.8em" margin="0"/> ReactEurope</ListItem>
+              <ListItem><Image src={images.youtubeLogo.replace("/", "")} height="0.8em" margin="0"/> MUST SEE: Render 2016: Lee Byron</ListItem>
+            </List>
           </Slide>
 
           <Slide>
