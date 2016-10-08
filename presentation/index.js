@@ -113,6 +113,21 @@ export default class Presentation extends React.Component {
             </Layout>
           </Slide>
 
+          <Slide notes="3 millions de comptes, 1,5 milliards de mains">
+            <Heading textColor="secondary">Winamax</Heading>
+            <List>
+              <ListItem>Leader sur le poker en France</ListItem>
+              <Appear><ListItem>C++, PHP, NodeJS, Ruby, Erlang, LUA | AS3, Javascript</ListItem></Appear>
+              <Appear><ListItem>L'innovation comme ADN</ListItem></Appear>
+              <Appear><ListItem>2010 : Ouverture du marché français</ListItem></Appear>
+              <Appear><ListItem>2011 : Applications mobiles</ListItem></Appear>
+              <Appear><ListItem>2013 : Expresso</ListItem></Appear>
+              <Appear><ListItem>2014 : Application mobile JS</ListItem></Appear>
+              <Appear><ListItem>2014 : Paris Sportifs</ListItem></Appear>
+              <Appear><ListItem>2016 : Premiers projets React</ListItem></Appear>
+            </List>
+          </Slide>
+
           <Slide>
             <br/><Image src={images.reactLogo.replace("/", "")} height="150px"/>
             <List>
