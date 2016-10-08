@@ -401,12 +401,17 @@ export default class Presentation extends React.Component {
             </Layout>
           </Slide>
 
+          <Slide notes="Haskell, OCaml, Erlang, Scala, Elm">
+            <Heading textColor="secondary">Avantages</Heading>
+            <Appear><div><Text margin="30px 0 0 0" >Paradigme fonctionnel</Text><Image src={images.functional.replace('/', '')} width="850px"/></div></Appear>
+          </Slide>
+
           <Slide>
             <Heading textColor="secondary">Avantages</Heading>
             <List>
-              <Appear><ListItem>Léger (2KB) et sans magie noire</ListItem></Appear>
+              <ListItem>Léger (2KB) et sans magie noire</ListItem>
               <Appear><ListItem>Pas une library mais une philosophie (redux.net, redux.rb)</ListItem></Appear>
-              <Appear><ListItem>Parfaitement fait pour React (Immutabilité)</ListItem></Appear>
+              <Appear><ListItem>Parfait complément de React (Immutabilité)</ListItem></Appear>
               <Appear><ListItem>Comportement déterministe et prédictible</ListItem></Appear>
               <Appear><ListItem>Tests unitaires triviaux</ListItem></Appear>
               <Appear><ListItem>Architecture modulaire (plugins)</ListItem></Appear>
