@@ -29,7 +29,7 @@ import preloader from "spectacle/lib/utils/preloader";
 import createTheme from "spectacle/lib/themes/default";
 
 // Import custom component
-import Interactive from "../assets/interactive";
+import Counter from "../assets/counter.jsx";
 
 // Require CSS
 require("normalize.css");
@@ -221,6 +221,20 @@ export default class Presentation extends React.Component {
             <Heading textColor="black" fit>les composants enfants ne peuvent les modifier</Heading>
           </Slide>
 
+          <Slide>
+          <Layout>
+            <Fill>
+              <CodePane
+                lang="jsx"
+                source={require("raw!../assets/counter.example")}
+                margin="20px auto"
+              />
+              </Fill>
+              <Fill>
+                <Counter />
+              </Fill>
+            </Layout>
+          </Slide>
 
           <Slide>
             <Heading textColor="secondary" fit>Render() à chaque update</Heading>
