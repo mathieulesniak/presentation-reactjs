@@ -1,4 +1,4 @@
-function counter_reducer(state = 0, action) {
+function counterReducer(state = 0, action) {
   switch (action.type) {
     case "COUNTER_ADD":
       return state + action.value;
@@ -10,7 +10,7 @@ function counter_reducer(state = 0, action) {
   }
 }
 
-function update_reducer(state = {}, action) {
+function updateReducer(state = {}, action) {
   switch (action.type) {
     case "COUNTER_ADD":
     case "COUNTER_RESET":

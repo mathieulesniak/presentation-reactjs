@@ -327,6 +327,7 @@ export default class Presentation extends React.Component {
                 <CodePane
                   lang="js"
                   source={require("raw!../assets/state.example")}
+
                 />
               </Fill></Appear>
               <Appear><Fill>
@@ -334,6 +335,7 @@ export default class Presentation extends React.Component {
                 <CodePane
                   lang="js"
                   source={require("raw!../assets/actions.example")}
+                  margin="0px 0px 0px 2px"
                 />
               </Fill></Appear>
               <Appear><Fill>
@@ -341,6 +343,7 @@ export default class Presentation extends React.Component {
                 <CodePane
                   lang="js"
                   source={require("raw!../assets/reducers.example")}
+                  margin="0px 0px 0px 4px"
                 />
               </Fill></Appear>
             </Layout>

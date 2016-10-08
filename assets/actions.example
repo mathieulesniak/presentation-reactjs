@@ -4,7 +4,7 @@
 }
 
 // Action Creator
-function counter_add(add_value) {
+function counterAdd(add_value) {
   return {
     type: "COUNTER_ADD",
     value: add_value
