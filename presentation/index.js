@@ -223,6 +223,15 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
+            <Heading textColor="black" size={2}>Les composants sont des machines à état</Heading>
+            <List>
+              <ListItem>Le state contient les données modifiables par le composant</ListItem>
+              <ListItem>setState(data, callback) définit cet état</ListItem>
+              <ListItem>render() redessine la vue à partir ce nouvel état</ListItem>
+            </List>
+          </Slide>
+
+          <Slide>
           <Layout>
             <Fill>
               <CodePane
