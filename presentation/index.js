@@ -160,7 +160,6 @@ export default class Presentation extends React.Component {
               <ListItem>Wallmart</ListItem>
               <ListItem>AirBNB</ListItem>
               <ListItem>Netflix</ListItem>
-              <ListItem>BBC (module de recherche)</ListItem>
               <ListItem>Yahoo Mail</ListItem>
               <ListItem>Reddit Mobile</ListItem>
               <ListItem>Dropbox, Facebook, Github, IG, Wired</ListItem>

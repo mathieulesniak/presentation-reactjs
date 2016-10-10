@@ -1,28 +1,31 @@
 import React from 'react';
+import Congrats from './Congrats.jsx';
 
-class Counter extends React.Component {
+export default class Counter extends React.Component {
   constructor(props) {
     super(props);
     this.state = { count: 0 };
-    this.incCount = this.incCount.bind(this);
+    this.incrementCount = this.incrementCount.bind(this);
     this.resetCount = this.resetCount.bind(this);
   }
-
-  incCount(){
+  incrementCount(){
     this.setState({ count: this.state.count + 1 });
   }
-
   resetCount() {
     this.setState({ count: 0 });
   }
-
   render(){
     return (
       <div className="my-component">
-        <h1>Count: {this.state.count}</h1>
-        <button onClick={this.incCount}>Increment</button>
-        <button onClick={this.resetCount}>Reset</button>
+      {this.state.count < 5 ?
+        <div>
+          <h1>Count: {this.state.count}</h1>
+          <button type="button" onClick={this.incrementCount}>Increment</button>
+          <button type="button" onClick={this.resetCount}>Reset</button>
+        </div> : 
+        <Congrats />
+      }
       </div>
-);}}
-
-export default Counter;
+    );
+  }
+}
