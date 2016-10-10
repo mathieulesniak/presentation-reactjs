@@ -146,7 +146,7 @@ export default class Presentation extends React.Component {
           <Slide>
             <br/><Image src={images.reactLogo.replace("/", "")} height="150px"/>
             <List>
-              <ListItem>Fin 2011, création en interne</ListItem>
+              <ListItem>Fin 2011, création ReactJS en interne Facebook</ListItem>
               <ListItem>Avril 2012 rachat d'Instagram.com</ListItem>
               <ListItem>Refonte / intégration au sein de Facebook</ListItem>
               <ListItem>Juin 2013, open source React</ListItem>
