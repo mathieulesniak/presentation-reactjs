@@ -197,9 +197,7 @@ export default class Presentation extends React.Component {
               source={require("raw!../assets/jsx.example")}
               margin="20px auto"
             />
-            <Appear>
-              <Heading textColor="secondary" size={3}>Une seule méthode obligatoire : render()</Heading>
-            </Appear>
+            <Heading textColor="secondary" size={3}>Une seule méthode obligatoire : render()</Heading>
           </Slide>
 
           <Slide notes="Note sur HTML / JSX, pas du vrai HTML, React transforme">
@@ -253,7 +251,7 @@ export default class Presentation extends React.Component {
             <Heading textColor="black" fit>les composants enfants ne peuvent les modifier</Heading>
           </Slide>
 
-          <Slide notes="On ne stocke pas le données calculées, on ne duplique pas les données => Single Source of Truth">
+          <Slide notes="On ne stocke pas le données calculées, on ne duplique pas les données => Single Source of Truth<br/>State = mutable par opposition aux props">
             <Heading textColor="black" size={2}>Les composants sont des machines à état</Heading>
             <List>
               <ListItem>Le state contient les données modifiables par le composant</ListItem>
@@ -320,7 +318,7 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
 
-          <Slide>
+          <Slide note="Exemple simple, 100 lignes sur le tableau, 40% de différence">
             <Heading textColor="secondary" fit>shouldComponentUpdate()</Heading>
             <Image src={images.scuTab.replace('/', '')} />
             <Layout>
