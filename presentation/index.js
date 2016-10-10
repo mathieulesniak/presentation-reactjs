@@ -152,7 +152,7 @@ export default class Presentation extends React.Component {
               <ListItem>Utilisation interne à FB (messenger)</ListItem>
             </List>
           </Slide>
-          <Slide>
+          <Slide notes="Migration récente de Wallmart qui a publié ses outils / electrode.io">
             <Heading textColor="secondary">Qui l'utilise ?</Heading>
             <List>
               <ListItem>Apple (developer portal)</ListItem>
@@ -190,7 +190,7 @@ export default class Presentation extends React.Component {
             <Image src={images.difficult.replace('/', '')} width="80%"/>
           </Slide>
 
-          <Slide>
+          <Slide notes="On peut bien sur ajouter plein d'autres methodes React ou propres">
             <CodePane
               lang="jsx"
               source={require("raw!../assets/jsx.example")}
@@ -201,7 +201,7 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
 
-          <Slide>
+          <Slide notes="Note sur HTML / JSX, pas du vrai HTML, React transforme">
             <Heading textColor="secondary" fit size={2}>Faites des composants, pas des templates,</Heading>
             <Heading textColor="secondary" fit size={2}>Encapsulez-les et réutilisez-les</Heading>
           </Slide>
