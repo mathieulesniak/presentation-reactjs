@@ -312,8 +312,8 @@ export default class Presentation extends React.Component {
               <ListItem>componentWillMount</ListItem>
               <ListItem>componentDidMount</ListItem>
               <ListItem>componentWillReceiveProps</ListItem>
-              <ListItem><b>shouldComponentUpdate</b></ListItem>
               <ListItem>componentWillUpdate</ListItem>
+              <ListItem><b>shouldComponentUpdate</b></ListItem>
             </List>
           </Slide>
 
