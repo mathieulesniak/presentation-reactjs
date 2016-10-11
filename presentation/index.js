@@ -482,12 +482,12 @@ export default class Presentation extends React.Component {
             <Image src={images.reactNative.replace('/', '')} />
           </Slide>
 
-          <Slide>
+          <Slide notes="vjeux = Christopher Chedeau - Promo 2012">
             <Heading textColor="secondary">Références</Heading>
             <List>
               <ListItem><Image src={images.eggheadLogo.replace("/", "")} height="0.8em" margin="0"/> EggHead.io</ListItem>
               <ListItem><Image src={images.githubLogo.replace("/", "")} height="0.8em" margin="0"/> Create React App <span style={{fontSize:"0.7em"}}>https://github.com/facebookincubator/create-react-app</span></ListItem>
-              <ListItem><Image src={images.twitterLogo.replace("/", "")} height="0.8em" margin="0"/> @dan_abramov,  @reactjs, @Vjeux, @sebmarkbage</ListItem>
+              <ListItem><Image src={images.twitterLogo.replace("/", "")} height="0.8em" margin="0"/> @reactjs, @dan_abramov, @Vjeux, @sebmarkbage</ListItem>
               <ListItem><Image src={images.reactEuropeLogo.replace("/", "")} height="0.8em" margin="0"/> ReactEurope</ListItem>
               <ListItem><Image src={images.youtubeLogo.replace("/", "")} height="0.8em" margin="0"/> MUST SEE: Render 2016: Lee Byron</ListItem>
             </List>
