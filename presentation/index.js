@@ -430,7 +430,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <Heading textColor="secondary" size={4}>React-Redux</Heading>
+            <Heading textColor="secondary" size={4} margin="-20px 0 0 0">React-Redux</Heading>
             <Layout>
               <Fill>
                 <CodePane
