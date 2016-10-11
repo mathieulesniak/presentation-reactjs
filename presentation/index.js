@@ -490,6 +490,7 @@ export default class Presentation extends React.Component {
               <ListItem><Image src={images.twitterLogo.replace("/", "")} height="0.8em" margin="0"/> @reactjs, @dan_abramov, @Vjeux, @sebmarkbage</ListItem>
               <ListItem><Image src={images.reactEuropeLogo.replace("/", "")} height="0.8em" margin="0"/> ReactEurope</ListItem>
               <ListItem><Image src={images.youtubeLogo.replace("/", "")} height="0.8em" margin="0"/> MUST SEE: Render 2016: Lee Byron</ListItem>
+              <ListItem><Image src={images.githubLogo.replace("/", "")} height="0.8em" margin="0"/> Cette présentation <span style={{fontSize:"0.7em"}}>https://github.com/mathieulesniak/presentation-reactjs</span></ListItem>
             </List>
           </Slide>
 
