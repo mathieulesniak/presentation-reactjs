@@ -340,7 +340,7 @@ export default class Presentation extends React.Component {
 
           <Slide transition={["slide"]}>
             <Heading textColor="secondary" textColor="secondary">Flux Pattern</Heading>
-            <Text>(Unidirectionnal Data Flow)</Text>
+            <Text>(Unidirectional Data Flow)</Text>
             <Appear><Image src={images.flux.replace('/', '')} width="100%"/></Appear>
             <List>
               <Appear><ListItem>Pas de librairie officielle, uniquement le Dispatcher</ListItem></Appear>
