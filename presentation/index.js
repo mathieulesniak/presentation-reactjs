@@ -355,13 +355,13 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>Inspiration d'ELM (langage purement fonctionnel)</ListItem></Appear>
               <Appear><ListItem>L'objectif ?</ListItem></Appear>
             </List>
-            <Layout fit>
+            <Layout>
               <Appear><Fill>
-                <Image src={images.coke.replace('/','')} width="50%"/>
+                <Image src={images.coke.replace('/','')} width="50%" margin="-25px 0 0 0"/>
                 <Text>Mutabilité</Text>
               </Fill></Appear>
               <Appear><Fill>
-                <Image src={images.mentos.replace('/','')} width="50%"/>
+                <Image src={images.mentos.replace('/','')} width="50%" margin="-25px 0 0 0"/>
                 <Text>Asynchronisme</Text>
               </Fill></Appear>
             </Layout>
