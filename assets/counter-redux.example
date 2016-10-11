@@ -7,9 +7,14 @@ class Counter extends React.Component {
     const { count, dispatch } = this.props;
     return (
       <div className="my-component">
-        <h1>Count: {count}</h1>
-        <button onClick={()=>dispatch(counterAdd(1))}>Increment</button>
-        <button onClick={()=>dispatch(counterReset())}>Reset</button>
+      {this.state.count < 5 ?
+        <div>
+          <h1>Count: {this.state.count}</h1>
+          <button onClick={()=>dispatch(counterAdd(1))}>Increment</button>
+          <button onClick={()=>dispatch(counterReset())}>Reset</button>
+        </div> :
+        <Congrats />
+      }
       </div>
 );}}
 

@@ -16,7 +16,7 @@ function updateReducer(state = {}, action) {
     case "COUNTER_RESET":
       state = {
         last: action.ts,
-        count: state.count + 1
+        nb_update: state.nb_update + 1
       };
       break;
   }
