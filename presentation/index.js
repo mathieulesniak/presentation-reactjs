@@ -248,11 +248,13 @@ export default class Presentation extends React.Component {
           <Slide>
             <Heading textColor="black" fit>Les props sont "immutable"</Heading>
             <Heading textColor="black" fit>les composants enfants ne peuvent les modifier</Heading>
-            <Heading textColor="black" fit><br/>Mais comment modifier l'état du composant ?</Heading>
           </Slide>
 
-          <Slide notes="On ne stocke pas le données calculées, on ne duplique pas les données => Single Source of Truth<br/>State = mutable par opposition aux props">
-            <Heading textColor="black" size={2}>Les composants sont des machines à état</Heading>
+         <Slide notes="On ne stocke pas le données calculées, on ne duplique pas les données => Single Source of Truth<br/>State = mutable par opposition aux props">
+            <Heading textColor="black" fit>Et si on a besoin de modifier l'état d'un composant ?</Heading>
+            <Heading textColor="black" fit size={3}>Une solution : le state</Heading>
+          
+            <Text><br/><b>Les composants sont des machines à état :</b></Text>
             <List>
               <ListItem>Le state contient les données modifiables par le composant</ListItem>
               <ListItem>setState(data, callback) définit cet état</ListItem>
