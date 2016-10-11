@@ -248,6 +248,7 @@ export default class Presentation extends React.Component {
           <Slide>
             <Heading textColor="black" fit>Les props sont "immutable"</Heading>
             <Heading textColor="black" fit>les composants enfants ne peuvent les modifier</Heading>
+            <Heading textColor="black" fit><br/>Mais comment modifier l'état du composant ?</Heading>
           </Slide>
 
           <Slide notes="On ne stocke pas le données calculées, on ne duplique pas les données => Single Source of Truth<br/>State = mutable par opposition aux props">
