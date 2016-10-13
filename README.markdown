@@ -11,5 +11,5 @@ Ouvrez votre navigateur sur http://localhost:3000, et enjoy :)
 
 ou en version [PDF](https://github.com/mathieulesniak/presentation-reactjs/blob/master/REACTJS-REDUX-D%C3%89COUVERTE-ET-MISE-EN-%C5%92UVRE-WINAMAX.pdf)
 
-Retrouvez-nous sur Twitter : @mathieulesniak et @chabou69
+Retrouvez-nous sur Twitter : [@mathieulesniak](https://twitter.com/mathieulesniak) et [@chabou69](https://twitter.com/chabou69)
 
